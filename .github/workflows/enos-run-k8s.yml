@@ -27,6 +27,7 @@ jobs:
   enos:
     name: Integration
     runs-on: ubuntu-latest
+    if: github.repository != 'QubitPi/hashicorp-vault'
     env:
       GITHUB_TOKEN: ${{ secrets.ELEVATED_GITHUB_TOKEN }}
     steps:

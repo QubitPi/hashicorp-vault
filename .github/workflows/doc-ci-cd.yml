@@ -1,0 +1,14 @@
+# Copyright (c) Jiaqi Liu
+name: Documentation CI/CD
+
+'on':
+  pull_request:
+  push:
+    branches:
+      - master
+
+jobs:
+  documentation-ci-cd:
+    uses: QubitPi/hashicorp-dev-portal/.github/workflows/doc-ci-cd.yml@master
+    with:
+      domain: vault.qubitpi.org
